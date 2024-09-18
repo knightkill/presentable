@@ -25,9 +25,12 @@ jobs:
       - name: Generate HTML from Markdown
         run: |
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
-            filename=$(basename "$file" .md)
-            npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
+            git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
+              filename=$(basename "$file" .md)
+              npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
+            done
           done
+        shell: /usr/bin/bash -e {0}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
