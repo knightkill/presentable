@@ -1,3 +1,17 @@
+---
+marp: true
+theme: default
+class: invert
+size: 16:9
+style: |
+  img {background-color: transparent!important;}
+  a:hover, a:active, a:focus {text-decoration: none;}
+  header a {color: #148ec8 !important; font-size: 24px;}
+  footer {color: #148ec8;}
+header: '[Stable Diffusion 101](#1 " ")'
+footer: 'Slides by [Hardip](https://hardippatel.com)'
+---
+
 # Hitchhiker's Guide to Text-To-Image Generation
 #### [Hardip Patel](https://hardippatel.com)
 #

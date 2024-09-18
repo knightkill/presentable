@@ -57,11 +57,11 @@ jobs:
       
       - name: Generate index.html
         run: |
-          echo "<html><body><h1>Presentations</h1><ul>" > html/index.html
+          echo "<html><body><h1 style='text-align: center;'>Presentations</h1><ul style='list-style-type: none;'>" > html/index.html
           for file in html/*.html; do
             if [ "$(basename "$file")" != "index.html" ]; then
               filename=$(basename "$file")
-              echo "<li><a href=\"$filename\">$(basename "$filename" .html)</a></li>" >> html/index.html
+              echo "<li style='margin: 10px;'><a href=\"$filename\" style='text-decoration: none; color: #148ec8;'>$(basename "$filename" .html)</a></li>" >> html/index.html
             fi
           done
           echo "</ul></body></html>" >> html/index.html
