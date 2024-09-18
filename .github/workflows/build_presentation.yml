@@ -24,11 +24,9 @@ jobs:
 
       - name: Generate HTML from Markdown
         run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
-            git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
-              filename=$(basename "$file" .md)
-              npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
-            done
+          for file in $(find md/ -type f -name '*.md'); do
+            filename=$(basename "$file" .md)
+            npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
           done
         shell: /usr/bin/bash -e {0}
 
