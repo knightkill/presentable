@@ -22,13 +22,23 @@ jobs:
       - name: Install dependencies
         run: npm install @marp-team/marp-cli
 
-      - name: Generate HTML from Markdown
+      - name: Generate HTML from Markdown and remove obsolete files
         run: |
-          for file in $(find md/ -type f -name '*.md'); do
+          # Generate HTML for updated Markdown files
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
             filename=$(basename "$file" .md)
             npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
           done
-        shell: /usr/bin/bash -e {0}
+
+          # Remove HTML files without corresponding Markdown files
+          for html_file in html/*.html; do
+            if [ "$(basename "$html_file")" != "index.html" ]; then
+              md_file="md/$(basename "$html_file" .html).md"
+              if [ ! -f "$md_file" ]; then
+                rm "$html_file"
+              fi
+            fi
+          done
       
       - name: Generate index.html
         run: |
