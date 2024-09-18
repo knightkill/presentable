@@ -36,15 +36,18 @@ jobs:
 
       - name: Generate HTML from Markdown and remove obsolete files
         run: |
-          # Generate HTML for updated Markdown files
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^md/.*\.md$' | while read file; do
+          # Create html directory if it doesn't exist
+          mkdir -p html
+
+          # Generate HTML for all Markdown files
+          for file in md/*.md; do
             filename=$(basename "$file" .md)
             npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
           done
 
           # Remove HTML files without corresponding Markdown files
           for html_file in html/*.html; do
-            if [ "$(basename "$html_file")" != "index.html" ]; then
+            if [ -f "$html_file" ] && [ "$(basename "$html_file")" != "index.html" ]; then
               md_file="md/$(basename "$html_file" .html).md"
               if [ ! -f "$md_file" ]; then
                 rm "$html_file"
