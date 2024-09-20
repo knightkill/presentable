@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-transition: glow 400ms
+transition: dissolve 600ms
 theme: gaia
 class: invert
 size: 16:9
@@ -45,21 +45,33 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 
 ---
 
-- Definition (Mayur) (5 mins)
-    1. What is AI?
-    2. What is ML?
-    3. How is ML differentiate AI?
+## Definition (Mayur) (5 mins)
+  1. What is AI?
+
+  2. What is ML?
+
+  3. What is DL?
+
 
 ---
+1. What is AI?
+    > Artificial intelligence (AI) involves using computers to do things that traditionally require human intelligence. 
+---
+2. What is ML?
+    > A subfield of AI where computer started to do things human can do
+---
+3. What is DL?
+    > A sub field  ML which help to process large amount of data. Deep learning mimics the workings of our brains. These neural networks can outperform humans at intelligent tasks like speech recognition or playing chess!
+---
 
-1. How is AI working? (Mayur) (2-5 mins)
+4. How is AI working? (Mayur) (2-5 mins)
+  - Example 
 
 --- 
 
-1. Chart of AI, ML, Deep Learning (10 mins)
-    1. AI/ML (Mayur)
-        1.  Research Papers
-        2.  Ongoing Development
+5. Chart of AI, ML, DL (10 mins)
+        -  Research Papers
+        -  Ongoing Development
 
 ---
 
@@ -78,13 +90,14 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 --- 
 
 2. Predictive/Analytical AI (Mayur) (10 mins)
-        1.  TimeSeries Forecast
-
+  - Predictive AI blends statistical analysis with machine learning algorithms to find data patterns and forecast future outcomes. It extracts insights from historical data to make accurate predictions about the most likely upcoming event, result or trend.
+  1.  TimeSeries Forecast 
 ---
 
 ## Coolbots! (Mayur)
-1. Cursor AI (5 mins) (IDE)
-2. ChatGPT assistants (5 mins) (Chat)
+1. Cursor AI (IDE)
+2. ChatGPT assistants
+  -
 
 ---
 
