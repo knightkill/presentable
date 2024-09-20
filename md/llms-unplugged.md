@@ -137,6 +137,17 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 
 ---
 
+# Google Colab
+<!-- _class: invert lead -->
+![1 w:512 h:256](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Colab_Hero.width-1600.format-webp.webp)
+
+- [Intro](https://colab.research.google.com/drive/1nVBN1fVQwFqL-9D7pzOxso7kPA_6vcv4?usp=sharing)
+- [LLM inference](https://colab.research.google.com/drive/1qTiH51xgA_6GZDqS0b2ASfPwKMWQhJ9t?usp=sharing)
+- [LLM inference 2](https://colab.research.google.com/drive/1q-FHd5aKUTdRF0G4p1ijzWI0Sf27uO-t?usp=sharing)
+- [LLM with finetuning](https://colab.research.google.com/drive/1tU3_k3-o_AAg-ZkK93H9TfMCmPg86wD3?usp=sharing)
+
+---
+
 # StreamLit Demo with Mermaid Finetuning (Hardip) (15 mins)
 
 ---
