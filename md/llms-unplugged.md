@@ -45,6 +45,8 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 # LLMs Unplugged
 ## Everyday Hacks and Cool bots creation!
 
+![devhub w:296 h:100](https://i0.wp.com/www.atyantik.com/wp-content/uploads/2024/07/atyantik-hub-logo.png?fit=1068%2C360&ssl=1)
+
 ---
 ## Slides
 
@@ -164,7 +166,7 @@ Indie Hacking | Anime | Novels | Music | Running
 * [LLM inference](https://colab.research.google.com/drive/1qTiH51xgA_6GZDqS0b2ASfPwKMWQhJ9t?usp=sharing)
 * [LLM inference 2](https://colab.research.google.com/drive/1q-FHd5aKUTdRF0G4p1ijzWI0Sf27uO-t?usp=sharing)
 * [LLM with finetuning](https://colab.research.google.com/drive/1tU3_k3-o_AAg-ZkK93H9TfMCmPg86wD3?usp=sharing)
-
+* [LLM in StreamLit](https://github.com/knightkill/presentable)
 ---
 
 # Can we make a quick UI for this?
