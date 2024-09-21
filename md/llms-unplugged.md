@@ -1,8 +1,8 @@
 ---
 marp: true
 paginate: true
-transition: dissolve 600ms
-theme: gaia
+transition: dissolve 400ms
+theme: uncover
 class: invert
 size: 16:9
 style: |
@@ -15,6 +15,11 @@ style: |
     view-transition-name: one;
     contain: layout; /* required */
   }
+  
+  img[alt="2"] {
+    view-transition-name: two;
+    contain: layout; /* required */
+  }
 
   /* Generic image styling for number icons */
   img:is([alt="1"], [alt="2"], [alt="3"]) {
@@ -24,11 +29,28 @@ style: |
     vertical-align: middle;
     width: 64px;
   }
-header: '[LLMs Unplugged](#1 " ")'
+  
+  @keyframes marp-transition-dissolve {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+  }
+header: '[LLMs Unplugged](#1 " ") / [Atyantik](https://atyantik.com)'
 footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) and [Hardip](https://hardippatel.com)'
 ---
 
-# LLMs Unplugged: Everyday Hacks and Cool bots creation!
+# LLMs Unplugged
+## Everyday Hacks and Cool bots creation!
+
+---
+## Slides
+
+http://present.hardippatel.com/llms-unplugged.html
+
+![bg right w:512 h:512](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/presentations.jpg)
 
 ---
 
@@ -38,86 +60,90 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 ---
 
 # Mayur Intro
+![bg right](https://media.licdn.com/dms/image/v2/D4D03AQHmJ-fgCEz-TA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720707306887?e=1732147200&v=beta&t=AtUZqGaTI00s2UElfDviwsvyadh0TGozCpZe_YXIxBo)
 
 ---
 
-# Hardip Intro
+![1 w:256 h:256](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/hardip.png)
+
+#### [HardipPatel.com](https://hardippatel.com)
+Developer @ [Atyantik Technologies](https://atyantik.com)
 
 ---
 
-## Definition (Mayur) (5 mins)
-  1. What is AI?
+![1 w:128 h:128](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/hardip.png)
 
-  2. What is ML?
+### ❤️ 
+Indie Hacking | Anime | Novels | Music | Running
+...and I have endless curiosity!
 
-  3. What is DL?
+---
+
+### Let's start with -
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) What is AI?
+
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) What is ML?
+
+![3](https://icongr.am/material/numeric-3-circle.svg?color=148ec8) What is DL?
 
 
 ---
-1. What is AI?
-    > Artificial intelligence (AI) involves using computers to do things that traditionally require human intelligence. 
+### ![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) What is AI?
+> Artificial intelligence (AI) involves using computers to do things that traditionally require human intelligence.
+
 ---
-2. What is ML?
-    > A subfield of AI where computer started to do things human can do
+### ![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) What is ML?
+> A subfield of AI where computer started to do things human can do
+
 ---
-3. What is DL?
-    > A sub field  ML which help to process large amount of data. Deep learning mimics the workings of our brains. These neural networks can outperform humans at intelligent tasks like speech recognition or playing chess!
+### ![1](https://icongr.am/material/numeric-3-circle.svg?color=148ec8) What is DL?
+> A sub field  ML which help to process large amount of data. Deep learning mimics the workings of our brains. These neural networks can outperform humans at intelligent tasks like speech recognition or playing chess!
+
 ---
 
-4. How is AI working? (Mayur) (2-5 mins)
+### How is AI working?
   - Example 
 
 --- 
 
-5. Chart of AI, ML, DL (10 mins)
-        -  Research Papers
-        -  Ongoing Development
+### Chart of AI, ML, DL (10 mins)
+-  Research Papers
+-  Ongoing Development
 
 ---
 
-# Types of Applied AI/ML (Hardip)
-1. Generative AI (2 mins)
-2. Predictive/Analytical AI (10 mins)
+## Types of Applied AI/ML
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Generative AI
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI
 
 ---
 
-1. Generative AI (2 mins) (Hardip)
-        1.  Definition
-        2.  Types
-            1. Single Modal (Text/Image/Video/Audio)
-            2. Multi Modal
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Generative AI (2 mins) (Hardip)
+   1. Single Modal (Text/Image/Video/Audio)
+   2. Multi Modal
 
 --- 
 
-2. Predictive/Analytical AI (Mayur) (10 mins)
-  - Predictive AI blends statistical analysis with machine learning algorithms to find data patterns and forecast future outcomes. It extracts insights from historical data to make accurate predictions about the most likely upcoming event, result or trend.
-  1.  TimeSeries Forecast 
+![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI (Mayur) (10 mins)
+> Predictive AI blends statistical analysis with machine learning algorithms to find data patterns and forecast future outcomes. It extracts insights from historical data to make accurate predictions about the most likely upcoming event, result or trend.
+ 
+---
+![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI (Mayur) (10 mins)
+
+- TimeSeries Forecast
+
 ---
 
 ## Coolbots! (Mayur)
-1. Cursor AI (IDE)
-2. ChatGPT assistants
-  -
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Cursor AI (IDE)
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) ChatGPT assistants
 
 ---
 
 ## Coolbots! (Hardip)
-1. Anything LLM (5 mins)
-2. Groq (2 mins)
-3. ComfyUI (10 mins)
-
----
-
-# Remove This
-1. Upgrade to Colab (Hardip)
-    1. Get acquinted (5 mins)
-    2. Using LLM first (Mayur) (5 mins)
-        1.  Show mermaid using LLM without finetuning
-        2.  Show mermaid using LLM with finetuning 
-    3. Using OpenAI (Hardip) (15 min)
-        1.  Inference (without Finetuned)
-        2.  FineTune 
-        3.  Inference
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Anything LLM (5 mins)
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Groq (2 mins)
+![3](https://icongr.am/material/numeric-3-circle.svg?color=148ec8) ComfyUI (10 mins)
 
 ---
 
@@ -139,20 +165,28 @@ footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) a
 
 # Google Colab
 <!-- _class: invert lead -->
-![1 w:512 h:256](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Colab_Hero.width-1600.format-webp.webp)
+![1 w:400 h:200](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Colab_Hero.width-1600.format-webp.webp)
 
-- [Intro](https://colab.research.google.com/drive/1nVBN1fVQwFqL-9D7pzOxso7kPA_6vcv4?usp=sharing)
-- [LLM inference](https://colab.research.google.com/drive/1qTiH51xgA_6GZDqS0b2ASfPwKMWQhJ9t?usp=sharing)
-- [LLM inference 2](https://colab.research.google.com/drive/1q-FHd5aKUTdRF0G4p1ijzWI0Sf27uO-t?usp=sharing)
-- [LLM with finetuning](https://colab.research.google.com/drive/1tU3_k3-o_AAg-ZkK93H9TfMCmPg86wD3?usp=sharing)
-
----
-
-# StreamLit Demo with Mermaid Finetuning (Hardip) (15 mins)
+* [Intro](https://colab.research.google.com/drive/1nVBN1fVQwFqL-9D7pzOxso7kPA_6vcv4?usp=sharing)
+* [LLM inference](https://colab.research.google.com/drive/1qTiH51xgA_6GZDqS0b2ASfPwKMWQhJ9t?usp=sharing)
+* [LLM inference 2](https://colab.research.google.com/drive/1q-FHd5aKUTdRF0G4p1ijzWI0Sf27uO-t?usp=sharing)
+* [LLM with finetuning](https://colab.research.google.com/drive/1tU3_k3-o_AAg-ZkK93H9TfMCmPg86wD3?usp=sharing)
 
 ---
 
-# Use api in Postman (Hardip) (5 mins)
+# Can we make a quick UI for this?
+
+---
+
+# Yes!
+
+---
+
+# Can we make a quick API out of this?
+
+---
+
+# Yes!
 
 ---
 
