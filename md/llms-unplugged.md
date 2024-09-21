@@ -38,7 +38,7 @@ style: |
         opacity: 0;
       }
   }
-header: '[LLMs Unplugged](#1 " ") / [Atyantik](https://atyantik.com)'
+header: '[LLMs Unplugged](#1 " ") / [Atyantik DevHub](https://atyantik.com)'
 footer: 'Slides by [Mayur](https://www.linkedin.com/in/mayur-gohil-b9858b12a/) and [Hardip](https://hardippatel.com)'
 ---
 
@@ -54,13 +54,17 @@ http://present.hardippatel.com/llms-unplugged.html
 
 ---
 
-(10 mins)
-# Expectations
+# Mayur Gohil
+![1 w:256 h:256](https://media.licdn.com/dms/image/v2/D4D03AQHmJ-fgCEz-TA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720707306887?e=1732147200&v=beta&t=AtUZqGaTI00s2UElfDviwsvyadh0TGozCpZe_YXIxBo)
+
+Software Engineering @ [Atyantik Technologies](https://atyantik.com)
 
 ---
 
-# Mayur Intro
-![bg right](https://media.licdn.com/dms/image/v2/D4D03AQHmJ-fgCEz-TA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720707306887?e=1732147200&v=beta&t=AtUZqGaTI00s2UElfDviwsvyadh0TGozCpZe_YXIxBo)
+![1 w:128 h:128](https://media.licdn.com/dms/image/v2/D4D03AQHmJ-fgCEz-TA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720707306887?e=1732147200&v=beta&t=AtUZqGaTI00s2UElfDviwsvyadh0TGozCpZe_YXIxBo)
+
+### ❤️
+Driving Innovation with AI | Machine Learning | NLP | Deep Learning Specialist
 
 ---
 
@@ -102,11 +106,10 @@ Indie Hacking | Anime | Novels | Music | Running
 ---
 
 ### How is AI working?
-  - Example 
 
 --- 
 
-### Chart of AI, ML, DL (10 mins)
+### Chart of AI, ML, DL
 -  Research Papers
 -  Ongoing Development
 
@@ -118,48 +121,38 @@ Indie Hacking | Anime | Novels | Music | Running
 
 ---
 
-![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Generative AI (2 mins) (Hardip)
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Generative AI
    1. Single Modal (Text/Image/Video/Audio)
    2. Multi Modal
 
 --- 
 
-![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI (Mayur) (10 mins)
+![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI
 > Predictive AI blends statistical analysis with machine learning algorithms to find data patterns and forecast future outcomes. It extracts insights from historical data to make accurate predictions about the most likely upcoming event, result or trend.
  
 ---
-![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI (Mayur) (10 mins)
+![1](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Predictive/Analytical AI
 
 - TimeSeries Forecast
 
 ---
 
-## Coolbots! (Mayur)
+## Coolbots!
 ![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Cursor AI (IDE)
 ![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) ChatGPT assistants
 
 ---
-
-## Coolbots! (Hardip)
-![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Anything LLM (5 mins)
-![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Groq (2 mins)
-![3](https://icongr.am/material/numeric-3-circle.svg?color=148ec8) ComfyUI (10 mins)
-
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) ChatGPT assistants
+- [Integrate Easy](https://chatgpt.com/g/g-vr4IpsqGM-integrateeasy)
+- [Clean your code](https://chatgpt.com/g/g-29jiCjHfj-make-the-code-clean)
+- [Chat with your code](https://chatgpt.com/g/g-34wthuFSb-chat-with-code)
+- [Linkedin Roaster](https://chatgpt.com/g/g-Ll9hk3dPu-social-roaster)
 ---
 
-# ![1](https://img.icons8.com/?size=100&id=lOqoeP2Zy02f&format=png&color=000000) Google Colab
-- What is Google Colab?
-- Why Use Google Colab?
-- Key Features
-- Installing Libraries
-- Use Cases
-
----
-
-<!-- _class: invert lead -->
-<!-- 10 mins -->
-# Google Colab
-![1 w:512 h:256](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Colab_Hero.width-1600.format-webp.webp)
+## Coolbots!
+![1](https://icongr.am/material/numeric-1-circle.svg?color=148ec8) Anything LLM
+![2](https://icongr.am/material/numeric-2-circle.svg?color=148ec8) Groq
+![3](https://icongr.am/material/numeric-3-circle.svg?color=148ec8) ComfyUI
 
 ---
 
@@ -190,9 +183,8 @@ Indie Hacking | Anime | Novels | Music | Running
 
 ---
 
-(Mayur)
-1. How to work with constantly updating data? (15 mins)
-    1. What is RAG? (Mayur)
+1. How to work with constantly updating data?
+    1. What is RAG?
     2. Why is RAG?
     3. How to RAG?
     4. Example for RAG?
@@ -200,8 +192,19 @@ Indie Hacking | Anime | Novels | Music | Running
 
 ---
 
-(Mayur)
-1. When to use Prompting vs Finetuning vs RAG
+![1 w:700 h:300](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/rag_1.png)
+
+---
+![2 w:700 h:300](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/rag_2.png)
+
+---
+![3 w:700 h:300](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/rag_3.png)
+
+---
+
+When to use Prompting vs Finetuning vs RAG
+
+![4 w:700 h:400](https://d3gh5bvik1zjmo.cloudfront.net/hardipstatics/ragvspromptingvsfinetuning.png)
 
 ---
 
@@ -221,4 +224,5 @@ Indie Hacking | Anime | Novels | Music | Running
 ---
 
 <!-- _class: invert lead -->
-# Thank you for your time and money!
+# Thank you for your time 
+# ...and money!
