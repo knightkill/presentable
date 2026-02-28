@@ -45,6 +45,12 @@ jobs:
             npx @marp-team/marp-cli@latest "$file" -o "html/${filename}.html"
           done
 
+          # Copy static assets referenced by markdown decks
+          if [ -d md/assets ]; then
+            rm -rf html/assets
+            cp -R md/assets html/assets
+          fi
+
           # Remove HTML files without corresponding Markdown files
           for html_file in html/*.html; do
             if [ -f "$html_file" ] && [ "$(basename "$html_file")" != "index.html" ]; then
