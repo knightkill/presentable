@@ -4,42 +4,46 @@ theme: default
 size: 16:9
 paginate: true
 style: |
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
   section {
-    background: radial-gradient(1200px 600px at 80% -10%, #10243f 0%, #0b1120 55%);
-    color: #e2e8f0;
-    font-family: "Inter", Arial, sans-serif;
-    padding: 52px 64px;
+    background: radial-gradient(900px 600px at 85% -15%, #161616 0%, #000 60%);
+    color: #e8e8e8;
+    font-family: "Karla", Helvetica, sans-serif;
+    padding: 50px 62px;
   }
-  h1 { font-size: 54px; margin: 0 0 8px; letter-spacing: -1.5px; color: #fff; }
-  h2 { font-size: 32px; color: #38bdf8; font-weight: 700; margin: 0 0 18px; }
-  h3 { margin: 0 0 8px; }
-  section::after { color: #475569; font-size: 16px; }
-  ul { font-size: 22px; margin-top: 10px; }
-  li { margin: 7px 0; color: #cbd5e1; }
+  h1 { font-size: 56px; margin: 0 0 8px; letter-spacing: -1px; color: #fff; font-weight: 800; }
+  h2 { font-size: 32px; color: #b5d6da; font-weight: 700; margin: 0 0 16px; }
+  section::after { color: #555; font-size: 16px; }
+  ul { font-size: 22px; margin-top: 8px; }
+  li { margin: 6px 0; color: #cfcfcf; }
   strong { color: #fff; }
-  .kicker { color: #38bdf8; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: 2px; }
-  .tag { font-family: "JetBrains Mono", monospace; background: #0f2942; color: #7dd3fc; padding: 2px 10px; border-radius: 7px; font-size: 0.82em; }
-  .lead2 { color: #94a3b8; font-size: 25px; margin: 8px 0 24px; max-width: 92%; line-height: 1.4; }
-  .goal { background: #0f172a; border-left: 4px solid #38bdf8; border-radius: 8px; padding: 13px 18px; font-size: 21px; color: #cbd5e1; }
-  .note { color: #94a3b8; font-size: 21px; margin-top: 16px; }
-  .flow { display: flex; flex-direction: column; gap: 11px; font-size: 21px; margin: 4px 0 16px; }
-  .step { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 12px 18px; }
-  .step .s { color: #38bdf8; font-weight: 700; }
-  .cols { display: flex; gap: 24px; margin: 6px 0 14px; }
-  .col { flex: 1; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 16px 20px; }
-  .col h3 { font-size: 21px; }
-  .col.manual h3 { color: #f59e0b; }
-  .col.auto h3 { color: #38bdf8; }
-  .col ul { font-size: 19px; margin: 0; padding-left: 18px; }
-  .res li { margin: 8px 0; }
-  .res b { color: #38bdf8; }
-  .stats { display: flex; gap: 38px; margin: 6px 0 14px; }
-  .stat .n { font-size: 76px; font-weight: 800; line-height: 1; }
-  .stat .l { color: #94a3b8; font-size: 19px; text-transform: uppercase; letter-spacing: 1px; }
-  .svc { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 8px; }
-  .svc span { background: #0f2942; border: 1px solid #1e3a5f; color: #7dd3fc; border-radius: 9px; padding: 6px 12px; font-size: 18px; font-weight: 600; }
-  .foot { position: absolute; bottom: 36px; left: 64px; color: #475569; font-size: 19px; }
+  .kicker { color: #b5d6da; font-family: "JetBrains Mono", monospace; font-size: 21px; letter-spacing: 3px; }
+  .lead2 { color: #9a9a9a; font-size: 25px; margin: 8px 0 22px; max-width: 92%; line-height: 1.4; }
+  .goal { background: #0d0d0d; border-left: 3px solid #b5d6da; border-radius: 6px; padding: 13px 18px; font-size: 21px; color: #cfcfcf; }
+  .note { color: #8f8f8f; font-size: 20px; margin-top: 14px; }
+  .cap { color: #b5d6da; font-size: 20px; margin: 0 0 6px; font-weight: 600; }
+  pre { background: #0c0c0c !important; border: 1px solid #1c1c1c; border-radius: 10px;
+        font-size: 16.5px; line-height: 1.45; padding: 14px 18px; margin: 6px 0; }
+  code { font-family: "JetBrains Mono", monospace; }
+  :not(pre) > code { background: #141414; color: #b5d6da; padding: 2px 8px; border-radius: 6px; font-size: 0.84em; }
+  .flow { display: flex; flex-direction: column; gap: 9px; font-size: 21px; margin: 4px 0 12px; }
+  .step { background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 10px; padding: 11px 18px; }
+  .step .s { color: #b5d6da; font-weight: 700; }
+  .cols { display: flex; gap: 22px; margin: 6px 0 12px; }
+  .col { flex: 1; background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 10px; padding: 15px 19px; }
+  .col h3 { font-size: 20px; margin: 0 0 6px; }
+  .col.manual h3 { color: #d9a441; }
+  .col.auto h3 { color: #b5d6da; }
+  .col ul { font-size: 18px; margin: 0; padding-left: 18px; }
+  .res li { margin: 7px 0; font-size: 21px; }
+  .res b { color: #b5d6da; }
+  .big2 { display: flex; gap: 30px; align-items: stretch; margin: 8px 0 12px; }
+  .card2 { flex: 1; background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 12px; padding: 18px 22px; }
+  .card2 .t { color: #8f8f8f; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+  .card2 .v { font-size: 30px; font-weight: 800; color: #fff; margin-top: 6px; line-height: 1.2; }
+  .svc { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .svc span { background: #0d0d0d; border: 1px solid #2a3a3c; color: #b5d6da; border-radius: 8px; padding: 6px 12px; font-size: 17px; font-weight: 600; }
+  .foot { position: absolute; bottom: 34px; left: 62px; color: #555; font-size: 19px; }
 ---
 
 <!-- _paginate: false -->
@@ -54,20 +58,16 @@ style: |
 
 <div class="foot">Hardip Patel · hardip.me</div>
 
-<!-- SPEAKER: One line on the universal pain (graveyard inbox), then the goal. Keep it a walkthrough, not a sell. -->
-
 ---
 
 ## Who I am
 
 - **Hardip Patel** — Engineer at **Atyantik Technologies**.
 - I build full-stack apps and data pipelines for a living.
-- And I *over-engineer my own life, one sync pipeline at a time* — my music, my reading, my health metrics are all auto-tracked.
+- And I *over-engineer my own life, one sync pipeline at a time* — my music, reading, and health metrics are all auto-tracked.
 - This talk is one of those projects: I pointed it at my **inbox**.
 
 <div class="note">hardip.me · github.com/knightkill</div>
-
-<!-- SPEAKER: Keep it short and human. The hook: "and now I've automated my inbox — here's how." -->
 
 ---
 
@@ -82,8 +82,6 @@ The loop every one of us runs, all day:
 
 <div class="note">Result: 5,000 unread, the important stuff buried, and eventually you just give up.</div>
 
-<!-- SPEAKER: Ground the talk in the manual process. This human judgment is exactly what we're going to capture. -->
-
 ---
 
 ## Then: the same loop, automated
@@ -97,85 +95,98 @@ The loop every one of us runs, all day:
 
 <div class="note">The trick: <strong>write your judgment down once</strong>, in plain English, and let the machine apply it to every email.</div>
 
-<!-- SPEAKER: This is the whole arc on one slide — same loop, different worker. The rest of the talk drills into the right side. -->
-
 ---
 
 ## How it decides — without hallucinating
 
-<div class="flow">
-  <div class="step"><span class="s">1 · policy.md</span> &nbsp; plain-English keep/archive rules — the only "config"</div>
-  <div class="step"><span class="s">2 · Azure OpenAI</span> &nbsp; classifies each email against that policy</div>
-  <div class="step"><span class="s">3 · typed verdict</span> &nbsp; reason · category · labels · importance · keep_in_primary</div>
-</div>
+<div class="cap">The model must fill a typed verdict — so it can't invent a label.</div>
 
-- We force **structured output**, so the model must return a valid verdict — it can't invent a label.
-- The model only **decides**; deterministic code does the acting.
-- Change behaviour by editing `policy.md` — **no code, no redeploy of logic**.
+```python
+class TriageVerdict(BaseModel):       # the contract the model must satisfy
+    reason: str                       # decide out loud first
+    category: Category                # a closed enum, not free text
+    labels: list[Label]              # only real Gmail labels
+    importance: int = Field(ge=0, le=100)
+    keep_in_primary: bool
 
-<!-- SPEAKER: Live — classify a few real emails, show the typed verdict, edit one policy line so a verdict flips. -->
+verdict = client.beta.chat.completions.parse(
+    model="gpt-5.4-nano",
+    messages=[{"role": "system", "content": policy},   # policy.md = the rules
+              {"role": "user",   "content": email}],
+    response_format=TriageVerdict,         # ← it can't reply with anything else
+).choices[0].message.parsed
+```
+
+<div class="note">Editing <code>policy.md</code> changes behaviour — no code, no redeploy of logic.</div>
 
 ---
 
 ## How it acts on a real inbox — safely
 
-- Applies labels and archives through the Gmail API (`messages.modify`).
-- **Dry-run by default** — logs what it *would* do before touching anything.
-- **Never-touch allowlist** — starred, important, VIP senders, threads you replied to.
-- **Idempotent** — a processed-set in Blob means it never re-acts on the same mail.
-- **Audited** — every decision is a line you can read back, and undo.
+<div class="cap">Guards + dry-run wrap every mutation. Archive = remove the INBOX label.</div>
 
-<!-- SPEAKER: Acting on real mail is the scary part, so the safety mechanisms ARE the feature. Show the dry-run table + audit log. -->
+```python
+def apply_verdict(svc, msg, verdict, *, dry_run=True):
+    if is_protected(msg):                  # starred / VIP / threads I replied to
+        return {"action": "skipped"}
+    add    = [label_id(l) for l in verdict.labels]
+    remove = [] if verdict.keep_in_primary else ["INBOX"]   # archive out of Primary
+    if dry_run:                            # default: log, touch nothing
+        return {"action": "dry-run", "add": add, "remove": remove}
+    svc.users().messages().modify(
+        userId="me", id=msg["id"],
+        body={"addLabelIds": add, "removeLabelIds": remove},
+    ).execute()                            # idempotent + written to an audit log
+```
 
 ---
 
 ## How we set it up — Azure + Gmail
 
-**Azure (one-time):**
-- `az login` → resource group → Function App + Storage account → Key Vault
-- give the Function a **managed identity**, grant it *read* on the Key Vault
-- put the secrets in Key Vault, then deploy with `func azure functionapp publish`
+<div class="cap">Azure (one-time): create the function with an identity, vault the secrets, deploy.</div>
 
-**Gmail (one-time):**
-- create an OAuth **Desktop** client → consent once in the browser → get a **refresh token**
-- store that token in **Key Vault**, so the cloud function signs in **headless** — no browser
+```bash
+az functionapp create --runtime python --assign-identity ...   # managed identity
+az keyvault secret set --vault-name $KV -n gmail-token-json --file token.json
+func azure functionapp publish $APP --python --build remote
+```
 
-<!-- SPEAKER: This is the part people actually ask about. Call out the headless-token-in-KeyVault trick — there's no browser in the cloud. -->
+<div class="cap" style="margin-top:14px">Gmail (one-time): consent once, then run headless forever.</div>
+
+- OAuth **Desktop** client → consent in the browser → get a **refresh token**.
+- Store that token in **Key Vault** → the cloud function signs in with **no browser**.
 
 ---
 
 ## The Azure pieces — and why each
 
 <ul class="res">
-  <li><b>Azure OpenAI</b> — runs the classifier (gpt-5.4-nano) and gives us structured output.</li>
-  <li><b>Azure Functions</b> (Consumption + Timer) — runs the pipeline every 10 min; serverless, pay-per-run.</li>
-  <li><b>Key Vault + Managed Identity</b> — holds every secret; the function reads them with its identity, so no keys live in code.</li>
-  <li><b>Blob Storage</b> — the processed-set + audit log; lets the function stay stateless.</li>
-  <li><b>Application Insights</b> — logs &amp; telemetry, hard-capped so cost can't run away.</li>
+  <li><b>Azure OpenAI</b> — runs the classifier (gpt-5.4-nano) with structured output.</li>
+  <li><b>Functions</b> (Consumption + Timer) — runs every 10 min; serverless, pay-per-run.</li>
+  <li><b>Key Vault + Managed Identity</b> — holds secrets; no keys ever live in code.</li>
+  <li><b>Blob Storage</b> — processed-set + audit log, so the function stays stateless.</li>
 </ul>
 
-<div class="svc">
-  <span>Azure OpenAI</span><span>Functions (Timer)</span><span>Key Vault + Managed Identity</span><span>Blob Storage</span><span>App Insights</span>
-</div>
+```python
+@app.timer_trigger(schedule="0 */10 * * * *")          # the automation: every 10 min
+def handle_scheduled_triage(t): run_triage()
 
-<!-- SPEAKER: One line per service — what it does and why it's there. This is the "with Azure" payoff. -->
+SecretClient(KV_URI, DefaultAzureCredential()).get_secret(name)   # identity, not keys
+```
 
 ---
 
-## What we achieved — and learned
+## What we achieved
 
-<div class="stats">
-  <div class="stat"><div class="n" style="color:#e2e8f0">31</div><div class="l">Triaged live</div></div>
-  <div class="stat"><div class="n" style="color:#16a34a">11</div><div class="l">Kept in Primary</div></div>
-  <div class="stat"><div class="n" style="color:#f59e0b">20</div><div class="l">Archived &amp; labeled</div></div>
+<div class="big2">
+  <div class="card2"><div class="t">Before</div><div class="v">5,000 unread<br/>everything in one pile</div></div>
+  <div class="card2"><div class="t">After</div><div class="v">Primary holds only<br/>what needs me</div></div>
 </div>
 
-Running every 10 minutes, ~$0 on Consumption (App Insights hard-capped).
+- Runs **every 10 minutes, unattended** — ~**$0** on Consumption (App Insights hard-capped).
+- **What we learned:** gpt-5 needs `max_completion_tokens`; Linux Consumption won't remote-build a zip (use `func publish`); structured output makes it trustworthy, dry-run makes it safe.
+- **Next:** Azure Document Intelligence to read PDF/attachment content into the verdict.
 
-**What we learned along the way:**
-- gpt-5 models need `max_completion_tokens` (not `max_tokens`); don't override temperature.
-- Linux Consumption won't remote-build a zip — deploy with `func azure functionapp publish`.
-- Structured output makes decisions trustworthy; dry-run first makes them safe.
-- Next: Azure Document Intelligence to read PDF/attachment content into the verdict.
+<div class="foot">github.com/knightkill · the pattern works on any inbox</div>
 
-<!-- SPEAKER: Close on the engineering reality + what's next. Refresh the numbers from the audit log before the talk. Q&A. -->
+<!-- SPEAKER: numbers drift as the timer runs, so this slide stays qualitative. If you want a hard count, pull it live from the audit log right before the talk. -->
