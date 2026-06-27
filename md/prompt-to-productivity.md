@@ -2,62 +2,96 @@
 marp: true
 theme: default
 size: 16:9
-paginate: false
+paginate: true
 style: |
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap");
   section {
     background: radial-gradient(1200px 600px at 80% -10%, #10243f 0%, #0b1120 55%);
     color: #e2e8f0;
     font-family: "Inter", Arial, sans-serif;
-    padding: 60px 72px;
+    padding: 56px 68px;
   }
-  h1 { font-size: 60px; margin: 0 0 6px; letter-spacing: -1.5px; color: #fff; }
-  h2 { font-size: 30px; color: #38bdf8; font-weight: 700; margin: 0 0 28px; }
-  .sub { color: #94a3b8; font-size: 26px; margin-bottom: 36px; }
-  .tag { font-family: "JetBrains Mono", monospace; background: #0f2942; color: #7dd3fc;
-         padding: 3px 12px; border-radius: 8px; font-size: 0.8em; }
-  .big { font-size: 120px; font-weight: 800; line-height: 1; color: #fff; }
-  .pain { font-size: 34px; color: #cbd5e1; margin-top: 20px; }
-  .pain b { color: #f59e0b; }
-  .azure { color: #38bdf8; font-weight: 700; }
-  .flow { display: flex; flex-direction: column; gap: 14px; font-size: 24px; margin-top: 6px; }
-  .step { background: #0f172a; border: 1px solid #1e293b; border-radius: 14px; padding: 16px 22px; }
-  .step .s { color: #38bdf8; font-weight: 700; }
-  .svc { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-  .svc span { background: #0f2942; border: 1px solid #1e3a5f; color: #7dd3fc;
-              border-radius: 10px; padding: 8px 16px; font-size: 20px; font-weight: 600; }
-  .stats { display: flex; gap: 40px; margin: 30px 0 10px; }
-  .stat .n { font-size: 96px; font-weight: 800; line-height: 1; }
-  .stat .l { color: #94a3b8; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
-  .foot { position: absolute; bottom: 42px; left: 72px; color: #475569; font-size: 20px; }
+  h1 { font-size: 56px; margin: 0 0 8px; letter-spacing: -1.5px; color: #fff; }
+  h2 { font-size: 34px; color: #38bdf8; font-weight: 700; margin: 0 0 22px; }
+  section::after { color: #475569; font-size: 16px; }
+  ul { font-size: 23px; margin-top: 14px; }
+  li { margin: 9px 0; color: #cbd5e1; }
+  strong { color: #fff; }
   .kicker { color: #38bdf8; font-family: "JetBrains Mono", monospace; font-size: 22px; letter-spacing: 2px; }
+  .tag { font-family: "JetBrains Mono", monospace; background: #0f2942; color: #7dd3fc; padding: 2px 10px; border-radius: 7px; font-size: 0.82em; }
+  .lead2 { color: #94a3b8; font-size: 26px; margin: 8px 0 26px; max-width: 92%; line-height: 1.4; }
+  .goal { background: #0f172a; border-left: 4px solid #38bdf8; border-radius: 8px; padding: 14px 20px; font-size: 22px; color: #cbd5e1; }
+  .flow { display: flex; flex-direction: column; gap: 12px; font-size: 22px; margin: 4px 0 18px; }
+  .step { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 13px 20px; }
+  .step .s { color: #38bdf8; font-weight: 700; }
+  .svc { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+  .svc span { background: #0f2942; border: 1px solid #1e3a5f; color: #7dd3fc; border-radius: 10px; padding: 7px 14px; font-size: 19px; font-weight: 600; }
+  .stats { display: flex; gap: 40px; margin: 8px 0 16px; }
+  .stat .n { font-size: 80px; font-weight: 800; line-height: 1; }
+  .stat .l { color: #94a3b8; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
+  .foot { position: absolute; bottom: 38px; left: 68px; color: #475569; font-size: 19px; }
 ---
 
-<!-- _class: lead -->
+<!-- _paginate: false -->
 
 <span class="kicker">AI-POWERED AUTOMATION WITH AZURE</span>
 
 # From Prompt to Productivity
 
-<div class="pain">My inbox: <b>5,000 unread</b>.<br/>One English paragraph in <span class="tag">policy.md</span> fixed it.</div>
+<div class="lead2">A build walkthrough: how we turned a plain-English policy into an Azure service that triages a Gmail inbox automatically — and what it took to make it trustworthy and unattended.</div>
+
+<div class="goal"><strong>The goal:</strong> clear a 5,000-email backlog and keep it clear — with no app, no rules engine, and no manual sorting.</div>
 
 <div class="foot">Hardip Patel · anormaly labs</div>
 
 <!--
-SPEAKER: Open on the pain — everyone in the room has a graveyard inbox. Show the REAL 5,000-unread screenshot here.
-Promise: by the end you'll see one English paragraph turn into an Azure automation that triages this inbox unattended.
-Don't sell "native Azure platform" — sell "applied Azure OpenAI + production agent patterns." Keep it honest.
+SPEAKER: Frame as "here's what we built and how", not a product pitch. The problem is universal (graveyard inbox).
+State the goal plainly, then spend the talk showing the mechanics. Live: show the real 5k-unread inbox.
 -->
 
 ---
 
-## The architecture
+## How it decides — without hallucinating
 
 <div class="flow">
-  <div class="step"><span class="s">PROMPT</span> &nbsp; policy.md — plain-English keep/archive rules</div>
-  <div class="step"><span class="s">CLASSIFY</span> &nbsp; Azure OpenAI (gpt-5.4-nano) → typed verdict, can't hallucinate a label</div>
-  <div class="step"><span class="s">ACT</span> &nbsp; label + archive in Gmail · never-touch allowlist · idempotent · audited</div>
-  <div class="step"><span class="s">AUTOMATE</span> &nbsp; Azure Functions Timer — every 10 min, unattended</div>
+  <div class="step"><span class="s">1 · policy.md</span> &nbsp; plain-English keep/archive rules — the only "config"</div>
+  <div class="step"><span class="s">2 · Azure OpenAI</span> &nbsp; classifies each email against that policy</div>
+  <div class="step"><span class="s">3 · typed verdict</span> &nbsp; reason · category · labels · importance · keep_in_primary</div>
+</div>
+
+- We force **structured output**, so the model must return a valid verdict — it can't invent a label.
+- The model only **decides**; deterministic code does the acting.
+- Behaviour changes by editing `policy.md` — **no code change, no redeploy of logic**.
+
+<!--
+SPEAKER: This is the core technique. Live: run the classifier on a few real emails, show the typed verdict.
+Then edit one policy line and re-run so a verdict flips — proving the policy is the only thing that drives behaviour.
+-->
+
+---
+
+## How it acts on a real inbox — safely
+
+- Applies labels and archives through the Gmail API (`messages.modify`).
+- **Dry-run by default** — it logs what it *would* do before anything is touched.
+- **Never-touch allowlist**: starred, important, VIP senders, threads you've replied to.
+- **Idempotent** — a processed-set (in Blob) means it never re-acts on the same message.
+- **Audited** — every decision is written as a line you can read back, and undo.
+
+<!--
+SPEAKER: The point: acting on real mail is the risky part, so the safety mechanisms ARE the feature.
+Live: show the dry-run table over the real inbox, then the audit log. Mention undo = re-add INBOX.
+-->
+
+---
+
+## How it runs — unattended on Azure
+
+<div class="flow">
+  <div class="step"><span class="s">Timer</span> &nbsp; Azure Functions runs the pipeline every 10 minutes</div>
+  <div class="step"><span class="s">Secrets</span> &nbsp; Key Vault via managed identity — no keys in code</div>
+  <div class="step"><span class="s">State</span> &nbsp; processed-set + audit log in Blob (the function itself is stateless)</div>
+  <div class="step"><span class="s">Auth</span> &nbsp; headless Gmail — refresh token from Key Vault, no browser</div>
 </div>
 
 <div class="svc">
@@ -65,15 +99,13 @@ Don't sell "native Azure platform" — sell "applied Azure OpenAI + production a
 </div>
 
 <!--
-SPEAKER: Walk top-to-bottom. The one idea: the LLM only DECIDES; deterministic code ACTS. Structured output is the anti-hallucination spine.
-Then the live moment — curl the deployed /api/triage and show the JSON {processed, kept, archived}. "This has been running every 10 minutes."
-Honesty beat: Document Intelligence for attachments is roadmap (M4), not yet wired — say so; an Azure crowd respects it.
-Secrets via managed identity, not keys in code. ~$0 on Consumption + a hard App Insights cap.
+SPEAKER: How it became an automation. Live: curl the deployed /api/triage and show the JSON summary.
+Emphasise managed identity (no secrets in code) and that the function is stateless (state lives in Blob).
 -->
 
 ---
 
-## One policy → a triaged inbox
+## What we achieved — and learned
 
 <div class="stats">
   <div class="stat"><div class="n" style="color:#e2e8f0">31</div><div class="l">Triaged live</div></div>
@@ -81,12 +113,15 @@ Secrets via managed identity, not keys in code. ~$0 on Consumption + a hard App 
   <div class="stat"><div class="n" style="color:#f59e0b">20</div><div class="l">Archived &amp; labeled</div></div>
 </div>
 
-<div class="pain" style="margin-top:24px">Edit one line in <span class="tag">policy.md</span> → a verdict flips.<br/>No code. No redeploy of logic. <span class="azure">That's the whole pitch.</span></div>
+Running every 10 minutes, ~$0 on Consumption (App Insights hard-capped).
 
-<div class="foot">github.com/knightkill · the pattern is reusable on any inbox</div>
+**What we learned along the way:**
+- gpt-5 models need `max_completion_tokens` (not `max_tokens`); don't override temperature.
+- Linux Consumption won't remote-build a zip — deploy with `func azure functionapp publish`.
+- Structured output is what makes the decisions trustworthy; dry-run first makes them safe.
+- Next: Azure Document Intelligence to read PDF/attachment content into the verdict.
 
 <!--
-SPEAKER: The payoff slide. Do the live policy-flip here (in DRY-RUN): move "recruiter" to KEEP, re-run, watch the verdict change.
-Land the close: one English file became an Azure automation that triages mail unattended — and you can read every decision in the audit log.
-Update these numbers from the live audit log right before the talk. Q&A.
+SPEAKER: Close on the engineering reality, not a sell. Real numbers (refresh from the audit log before the talk),
+honest cost, the gotchas that cost us time, and what's next. Then Q&A.
 -->
