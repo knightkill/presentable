@@ -18,14 +18,21 @@ style: |
   li { margin: 6px 0; color: #cfcfcf; }
   strong { color: #fff; }
   .kicker { color: #b5d6da; font-family: "JetBrains Mono", monospace; font-size: 21px; letter-spacing: 3px; }
-  .lead2 { color: #9a9a9a; font-size: 25px; margin: 8px 0 22px; max-width: 92%; line-height: 1.4; }
-  .goal { background: #0d0d0d; border-left: 3px solid #b5d6da; border-radius: 6px; padding: 13px 18px; font-size: 21px; color: #cfcfcf; }
-  .note { color: #8f8f8f; font-size: 20px; margin-top: 14px; }
+  .lead2 { color: #b3b3b3; font-size: 25px; margin: 8px 0 22px; max-width: 92%; line-height: 1.4; }
+  .goal { background: #0d0d0d; border-left: 3px solid #b5d6da; border-radius: 6px; padding: 13px 18px; font-size: 21px; color: #d4d4d4; }
+  .note { color: #ababab; font-size: 20px; margin-top: 14px; }
   .cap { color: #b5d6da; font-size: 20px; margin: 0 0 6px; font-weight: 600; }
-  pre { background: #0c0c0c !important; border: 1px solid #1c1c1c; border-radius: 10px;
+  pre { background: #0c0c0c !important; border: 1px solid #2a2a2a; border-radius: 10px;
         font-size: 16.5px; line-height: 1.45; padding: 14px 18px; margin: 6px 0; }
   code { font-family: "JetBrains Mono", monospace; }
   :not(pre) > code { background: #141414; color: #b5d6da; padding: 2px 8px; border-radius: 6px; font-size: 0.84em; }
+  /* WCAG AA+ code tokens: #ececec base guarantees contrast even if a token is unthemed */
+  pre code, pre .hljs { color: #ececec; }
+  .hljs-comment, .hljs-quote { color: #9aa6b2; }
+  .hljs-keyword, .hljs-built_in, .hljs-type { color: #b5d6da; }
+  .hljs-string, .hljs-attr, .hljs-meta { color: #e0b98a; }
+  .hljs-number, .hljs-literal { color: #d9a441; }
+  .hljs-title, .hljs-name, .hljs-section { color: #ffffff; }
   .flow { display: flex; flex-direction: column; gap: 9px; font-size: 21px; margin: 4px 0 12px; }
   .step { background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 10px; padding: 11px 18px; }
   .step .s { color: #b5d6da; font-weight: 700; }
@@ -39,11 +46,11 @@ style: |
   .res b { color: #b5d6da; }
   .big2 { display: flex; gap: 30px; align-items: stretch; margin: 8px 0 12px; }
   .card2 { flex: 1; background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 12px; padding: 18px 22px; }
-  .card2 .t { color: #8f8f8f; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+  .card2 .t { color: #ababab; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
   .card2 .v { font-size: 30px; font-weight: 800; color: #fff; margin-top: 6px; line-height: 1.2; }
   .svc { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
-  .svc span { background: #0d0d0d; border: 1px solid #2a3a3c; color: #b5d6da; border-radius: 8px; padding: 6px 12px; font-size: 17px; font-weight: 600; }
-  .foot { position: absolute; bottom: 34px; left: 62px; color: #555; font-size: 19px; }
+  .svc span { background: #0d0d0d; border: 1px solid #5e7376; color: #b5d6da; border-radius: 8px; padding: 6px 12px; font-size: 17px; font-weight: 600; }
+  .foot { position: absolute; bottom: 34px; left: 62px; color: #9a9a9a; font-size: 19px; }
 ---
 
 <!-- _paginate: false -->
