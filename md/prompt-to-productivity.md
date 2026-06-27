@@ -50,6 +50,12 @@ style: |
   .card2 .v { font-size: 30px; font-weight: 800; color: #fff; margin-top: 6px; line-height: 1.2; }
   .svc { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
   .svc span { background: #0d0d0d; border: 1px solid #5e7376; color: #b5d6da; border-radius: 8px; padding: 6px 12px; font-size: 17px; font-weight: 600; }
+  .repro { display: flex; gap: 44px; align-items: center; margin-top: 12px; }
+  .repro .l { flex: 1; }
+  .repro .l p { font-size: 23px; color: #d4d4d4; margin: 0 0 6px; }
+  .url { font-family: "JetBrains Mono", monospace; color: #b5d6da; font-size: 25px; margin-top: 16px; }
+  .qr { background: #ffffff; padding: 16px; border-radius: 16px; line-height: 0; }
+  .qr img { width: 290px; height: 290px; display: block; image-rendering: pixelated; }
   .foot { position: absolute; bottom: 34px; left: 62px; color: #9a9a9a; font-size: 19px; }
 ---
 
@@ -197,3 +203,23 @@ SecretClient(KV_URI, DefaultAzureCredential()).get_secret(name)   # identity, no
 <div class="foot">github.com/knightkill · the pattern works on any inbox</div>
 
 <!-- SPEAKER: numbers drift as the timer runs, so this slide stays qualitative. If you want a hard count, pull it live from the audit log right before the talk. -->
+
+---
+
+## Reproduce it
+
+<div class="repro">
+  <div class="l">
+    <p>It's one repo and a setup guide — point it at your own inbox.</p>
+    <ul>
+      <li><code>git clone</code> → fill <code>.env</code> → follow <strong>SETUP.md</strong></li>
+      <li>Azure + Gmail · ~30 minutes · ~$0 to run</li>
+      <li>Defaults to <strong>dry-run</strong> — safe to try on a real inbox</li>
+    </ul>
+    <div class="url">github.com/knightkill/inbox-triage</div>
+  </div>
+  <div class="qr"><img src="assets/prompt-to-productivity/qr.png" alt="QR code linking to github.com/knightkill/inbox-triage"/></div>
+</div>
+
+<!-- SPEAKER: The takeaway slide. "Clone it, fill .env, follow SETUP.md — Azure + Gmail in ~30 min." Leave this up during Q&A. -->
+
