@@ -42,6 +42,14 @@ style: |
   .col.manual h3 { color: #d9a441; }
   .col.auto h3 { color: #b5d6da; }
   .col ul { font-size: 18px; margin: 0; padding-left: 18px; }
+  .pipe { display: flex; align-items: stretch; margin: 22px 0 14px; }
+  .pipe .node { flex: 1; background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 12px; padding: 16px 14px; text-align: center; }
+  .pipe .node.future { border-style: dashed; border-color: #5e7376; }
+  .pipe .node .h { color: #b5d6da; font-weight: 700; font-size: 22px; }
+  .pipe .node .d { color: #cfcfcf; font-size: 16px; margin-top: 8px; line-height: 1.35; }
+  .pipe .arrow { display: flex; align-items: center; color: #5e7376; font-size: 30px; padding: 0 10px; }
+  .miniflow { background: #0c0c0c; border: 1px solid #1c1c1c; border-radius: 8px; padding: 11px 13px; font-size: 16px; color: #d4d4d4; margin-bottom: 12px; }
+  .miniflow code { color: #b5d6da; background: none; padding: 0; }
   .res li { margin: 7px 0; font-size: 21px; }
   .res b { color: #b5d6da; }
   .big2 { display: flex; gap: 30px; align-items: stretch; margin: 8px 0 12px; }
@@ -110,6 +118,24 @@ The loop every one of us runs, all day:
 
 ---
 
+## The build, in four stages
+
+<div class="pipe">
+  <div class="node"><div class="h">1 · Setup</div><div class="d">Azure + Gmail OAuth, once</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="h">2 · Local</div><div class="d">policy + classifier on your machine, dry-run</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="h">3 · Azure</div><div class="d">a timer runs it unattended, every 10 min</div></div>
+  <div class="arrow">→</div>
+  <div class="node future"><div class="h">4 · Attachments</div><div class="d">Document Intelligence — homework / PR</div></div>
+</div>
+
+<div class="note">Build &amp; test it locally first, then ship the <strong>same pipeline</strong> to Azure. Attachments are the open piece.</div>
+
+<!-- SPEAKER: the map for the rest of the talk. Point at where we are as you go. Stage 4 is dashed = not built. -->
+
+---
+
 ## How it decides — without hallucinating
 
 <div class="cap">The model must fill a typed verdict — so it can't invent a label.</div>
@@ -151,6 +177,25 @@ def apply_verdict(svc, msg, verdict, *, dry_run=True):
         body={"addLabelIds": add, "removeLabelIds": remove},
     ).execute()                            # idempotent + written to an audit log
 ```
+
+---
+
+## Same pipeline, two homes
+
+<div class="cols">
+  <div class="col"><h3 style="color:#b5d6da">Local — run_local.py</h3>
+    <div class="miniflow">you run it → <code>policy.md</code> → Azure OpenAI → Gmail → label / archive</div>
+    <ul><li>secrets from <code>.env</code></li><li>auth: <code>token.json</code> (browser once)</li><li>state: local files · dry-run default</li></ul>
+  </div>
+  <div class="col"><h3 style="color:#b5d6da">Azure — Function</h3>
+    <div class="miniflow">Timer (10 min) → <code>policy.md</code> → Azure OpenAI → Gmail → label / archive</div>
+    <ul><li>secrets from Key Vault (managed identity)</li><li>auth: token from Key Vault (headless)</li><li>state: Blob · dry-run via app setting</li></ul>
+  </div>
+</div>
+
+<div class="note">The middle — <strong>policy → classify → act — is the exact same code</strong>. Only the trigger, where secrets come from, and the state backend change.</div>
+
+<!-- SPEAKER: the key reassurance — you debug locally, then the identical pipeline runs in the cloud. Differences are just the edges. -->
 
 ---
 
@@ -198,7 +243,7 @@ SecretClient(KV_URI, DefaultAzureCredential()).get_secret(name)   # identity, no
 
 - Runs **every 10 minutes, unattended** — ~**$0** on Consumption (App Insights hard-capped).
 - **What we learned:** gpt-5 needs `max_completion_tokens`; Linux Consumption won't remote-build a zip (use `func publish`); structured output makes it trustworthy, dry-run makes it safe.
-- **Next:** Azure Document Intelligence to read PDF/attachment content into the verdict.
+- **Open · PRs welcome:** attachment-aware triage via Azure Document Intelligence — stubbed, plumbing ready (a good first PR).
 
 <div class="foot">github.com/knightkill · the pattern works on any inbox</div>
 
